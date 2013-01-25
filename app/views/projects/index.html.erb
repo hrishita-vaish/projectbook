@@ -1,0 +1,51 @@
+<h1>Listing projects</h1>
+
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Name</th>
+    <th>Status</th>
+    <th>Sponsor</th>
+    <th>Cc</th>
+    <th>Coordinator</th>
+    <th>Backup coordinator</th>
+    <th>Created on</th>
+    <th>Last action</th>
+    <th>Ci status</th>
+    <th>Office address</th>
+    <th>Url</th>
+    <th>Pid</th>
+    <th>Charge code</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @projects.each do |project| %>
+  <tr>
+    <td><%= project.project_id %></td>
+    <td><%= project.name %></td>
+    <td><%= project.status %></td>
+    <td><%= project.sponsor %></td>
+    <td><%= project.cc %></td>
+    <td><%= project.coordinator %></td>
+    <td><%= project.backup_coordinator %></td>
+    <td><%= project.created_on %></td>
+    <td><%= project.last_action %></td>
+    <td><%= project.ci_status %></td>
+    <td><%= project.office_address %></td>
+    <td><%= project.url %></td>
+    <td><%= project.pid %></td>
+    <td><%= project.charge_code %></td>
+    <td><%= link_to 'Email', project_emails_path(project)%></td>
+    <td><%= link_to 'Show', project %></td>
+    <td><%= link_to 'Edit', edit_project_path(project) %></td>
+    <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to 'New Project', new_project_path %>
+
+<%= link_to 'Back to Home', home_index_path %>

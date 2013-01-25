@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Project:</b>
+  <%= @project.project_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @project.name %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @project.status %>
+</p>
+
+<p>
+  <b>Sponsor:</b>
+  <%= @project.sponsor %>
+</p>
+
+<p>
+  <b>Cc:</b>
+  <%= @project.cc %>
+</p>
+
+<p>
+  <b>Coordinator:</b>
+  <%= @project.coordinator %>
+</p>
+
+<p>
+  <b>Backup coordinator:</b>
+  <%= @project.backup_coordinator %>
+</p>
+
+<p>
+  <b>Created on:</b>
+  <%= @project.created_on %>
+</p>
+
+<p>
+  <b>Last action:</b>
+  <%= @project.last_action %>
+</p>
+
+<p>
+  <b>Ci status:</b>
+  <%= @project.ci_status %>
+</p>
+
+<p>
+  <b>Office address:</b>
+  <%= @project.office_address %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @project.url %>
+</p>
+
+<p>
+  <b>Pid:</b>
+  <%= @project.pid %>
+</p>
+
+<p>
+  <b>Charge code:</b>
+  <%= @project.charge_code %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

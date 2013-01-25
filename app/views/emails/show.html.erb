@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>To:</b>
+  <%= @email.to %>
+</p>
+
+<p>
+  <b>From:</b>
+  <%= @email.from %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @email.subject %>
+</p>
+
+<p>
+  <b>Cc:</b>
+  <%= @email.cc %>
+</p>
+
+<p>
+  <b>Bcc:</b>
+  <%= @email.bcc %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @email.body %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @email.project_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_email_path(@email) %> |
+<%= link_to 'Back', emails_path %>

@@ -1,0 +1,73 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :project_id %><br />
+    <%= f.text_field :project_id, :readonly => true%>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :sponsor %><br />
+    <%= f.text_field :sponsor %>
+  </div>
+  <div class="field">
+    <%= f.label :cc %><br />
+    <%= f.text_field :cc %>
+  </div>
+  <div class="field">
+    <%= f.label :coordinator %><br />
+    <%= f.text_field :coordinator %>
+  </div>
+  <div class="field">
+    <%= f.label :backup_coordinator %><br />
+    <%= f.text_field :backup_coordinator %>
+  </div>
+  <div class="field">
+    <%= f.label :created_on %><br />
+    <%= f.date_select :created_on %>
+  </div>
+  <div class="field">
+    <%= f.label :last_action %><br />
+    <%= f.date_select :last_action %>
+  </div>
+  <div class="field">
+    <%= f.label :ci_status %><br />
+    <%= f.text_field :ci_status %>
+  </div>
+  <div class="field">
+    <%= f.label :office_address %><br />
+    <%= f.text_area :office_address %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :pid %><br />
+    <%= f.text_field :pid %>
+  </div>
+  <div class="field">
+    <%= f.label :charge_code %><br />
+    <%= f.text_field :charge_code %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

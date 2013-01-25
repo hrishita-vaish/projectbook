@@ -1,4 +1,17 @@
 ProjectBook::Application.routes.draw do
+  resources :emails
+
+
+  get "home/index"
+
+  
+match 'emails' => 'emails#index'
+
+  resources :projects do 
+    resources :emails
+  end
+  #match 'emails' => 'emails#all_email_index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +61,7 @@ ProjectBook::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
